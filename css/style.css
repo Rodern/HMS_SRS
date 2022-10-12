@@ -1,0 +1,35 @@
+@font-face {
+    font-family: KaushanScript-Regular;
+    src: url(../fonts/KaushanScript-Regular.ttf);
+}
+
+@font-face {
+    font-family: Nunito-Regular;
+    src: url(../fonts/nunito/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: Nunito-Bold;
+    src: url(../fonts/nunito/Nunito-Bold.ttf);
+}
+
+@font-face {
+    font-family: Nunito-Black;
+    src: url(../fonts/nunito/Nunito-Black.ttf);
+}
+
+.nunito-r, body {
+    font-family: Nunito-Regular;
+}
+
+.nunito-b {
+    font-family: Nunito-Bold;
+}
+
+.nunito-bl, h1 {
+    font-family: Nunito-Black;
+}
+
+header, footer, h2 {
+    text-align: center;
+}

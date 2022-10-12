@@ -1,12 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>HMS</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <header>
+        <h1>Hospital Management System</h1>
+        <h3>Software Requirement Specifications</h3>
+    </header>
+    <main>
+        <section>
+            <h2>1 Introduction</h2>
+            <details>
+                <h3>1.1 Purpose</h3>
+                <p>Identify the product whose software requirements are specified in this document, including the revision
+                    or release
+                    number. Describe the scope of the product that is covered by this SRS, particularly if this SRS
+                    describes only part
+                    of the system or a single subsystem.
+                </p>
+                <h3>1.2 Document Conventions</h3>
+                <p> Describe any standards or typographical conventions that were followed when writing this SRS, such as
+                    fonts or
+                    highlighting that have special significance. For example, state whether priorities for higher-level
+                    requirements are
+                    assumed to be inherited by detailed requirements, or whether every requirement statement is to have its
+                    own
+                    priority.
+                </p>
+                <h3>1.3 Intended Audience and Reading Suggestions</h3>
+                <p>Describe the different types of reader that the document is intended for, such as developers, project
+                    managers,
+                    marketing staff, users, testers, and documentation writers. Describe what the rest of this SRS contains
+                    and how
+                    it is organized. Suggest a sequence for reading the document, beginning with the overview sections and
+                    proceeding through the sections that are most pertinent to each reader type.</p>
+                <h3>1.4 Project Scope</h3>
+                <p>Provide a short description of the software being specified and its purpose, including relevant benefits,
+                    objectives, and goals. Relate the software to corporate goals or business strategies. If a separate
+                    vision
+                    and scope document is available, refer to it rather than duplicating its contents here. An SRS that
+                    specifies the next release of an evolving product should contain its own scope statement as a subset of
+                    the
+                    long-term strategic product vision.</p>
+                <h3>1.5 References</h3>
+                <p>List any other documents or Web addresses to which this SRS refers. These may include user interface
+                    style
+                    guides, contracts, standards, system requirements specifications, use case documents, or a vision and
+                    scope document. Provide enough information so that the reader could access a copy of each reference,
+                    including title, author, version number, date, and source or location.</p>
+                <h3>1.6 Acronyms and Abbreviations</h3>
+                <p>The following acronyms and abbreviation will apply to this document. SRS Software Requirement
+                    Specification </p>
+            </details>
+        </section>
+        <section>
+            <h2>2 Overall Description</h2>
+            <details>
+                <h3>2.1 Product Perspective</h3>
+                <p>Describe the context and origin of the product being specified in this SRS. For example, state whether
+                    this product
+                    is
+                    a follow-on member of a product family, a replacement for certain existing systems, or a new,
+                    self-contained
+                    product. If the SRS defines a component of a larger system, relate the requirements of the larger system
+                    to the
+                    functionality of this software and identify interfaces between the two. A simple diagram that shows the
+                    major
+                    components of the overall system, subsystem interconnections, and external interfaces can be helpful.
+                </p>
+                <h3>2.2 Product Features</h3>
+                <p>Summarize the major features the product contains or the significant functions that it performs or lets
+                    the user
+                    perform. Details will be provided in Section 3, so only a high level summary is needed here. Organize
+                    the
+                    functions to make them understandable to any reader of the SRS. A picture of the major groups of related
+                    requirements and how they relate, such as a top level data flow diagram or a class diagram, is often
+                    effective.</p>
+                <h3>2.3 User Classes and Characteristics</h3>
+                <p>Identify the various user classes that you anticipate will use this product. User classes may be
+                    differentiated
+                    based on frequency of use, subset of product functions used, technical expertise, security or privilege
+                    levels, educational level, or experience. Describe the pertinent characteristics of each user class.
+                    Certain
+                    requirements may pertain only to certain user classes. Distinguish the favored user classes from those
+                    who
+                    are less important to satisfy.</p>
+                <h3>2.4 Operating Environment</h3>
+                <p>Describe the environment in which the software will operate, including the hardware platform, operating
+                    system and versions, and any other software components or applications with which it must peacefully
+                    coexist.</p>
+                <h3>2.5 Design and Implementation Constraints</h3>
+                <p>Describe any items or issues that will limit the options available to the developers. These might
+                    include: corporate or regulatory policies; hardware limitations (timing requirements, memory
+                    requirements); interfaces to other applications; specific technologies, tools, and databases to be
+                    used; parallel operations; language requirements; communications protocols; security considerations;
+                    design conventions or programming standards (for example, if the customer’s organization will be
+                    responsible for maintaining the delivered software).</p>
+                <h3>2.6 User Documentation</h3>
+                <p>List the user documentation components (such as user manuals, on-line help, and tutorials) that
+                    will be delivered along with the software. Identify any known user documentation delivery
+                    formats or standards.</p>
+                <h3>2.7 Assumptions and Dependencies</h3>
+                <p>List any assumed factors (as opposed to known facts) that could affect the requirements stated
+                    in the SRS. These could include third-party or commercial components that you plan to use,
+                    issues around the development or operating environment, or constraints. The project could be
+                    affected if these assumptions are incorrect, are not shared, or change. Also identify any
+                    dependencies the project has on external factors, such as software components that you
+                    intend to reuse from another project, unless they are already documented elsewhere (for
+                    example, in the vision and scope document or the project plan).</p>
+
+            </details>
+        </section>
+        <section>
+            <h2>3 System Features</h2>
+            <section class="sub">
+                <h4></h4>
+            </section>
+            <section class="sub">
+                <h4>Patient Registration</h4>
+                <p>An HMS should provide an option to register patients and file all the relevant data
+                in the system. This feature is the foundation of a Hospital Management System upon
+                which the patient-interaction logic is built. EMRs should contain all the patient’s
+                necessary information that will be required for diagnosis and further treatment.
+                Apart from medical details, the software should also file financial information like an
+                insurance number. All this information should be easily accessible to authorized
+                people.</p>
+            </section>
+            <section class="sub">
+                <h4>Booking Appointments</h4>
+                <p>An HMS should have the feature to book appointments and change schedules if
+                needed. This option should be accessible by both the doctors and the patients to
+                book or change an appointment's date and time. The feature should also have an
+                integrated notification that generates SMS alerts and emails upon every booking or
+                change.
+                With such feature doctors and patients can:
+                Schedule and manage appointments
+                Provide convenient feedback
+                Provide the possibility to notify patient upon changing the appointments
+                Automate patients’ check-in system</p>
+            </section>
+            <section class="sub">
+                <h4>Billing and Accounting Management</h4>
+                <p>Billing and Accounting Management
+                An HMS should have a billing system for managing accounts and finances, including
+                patients bills, doctor fees, taxes, costs, and revenues of the hospital.
+                With details of the treatments and facilities availed by the patient, the software
+                should calculate the cost of the procedure. The price chart for the services and
+                facilities is predetermined and fed in the system, such as room per day cost,
+                operation charges for a particular case, or specific doctor’s fees. With this feature's
+                help, a patient can check the final expenses at the time of booking.
+                Automation of the account and financial management helps the organization to
+                reduce workload and human error. It also helps analyze a medical establishment’s
+                financial position and make corrections to its strategy to increase efficiency.</p>
+            </section>
+            <section class="sub">
+                <h4>Doctors Profile Section</h4>
+                <p>Ideally, a Hospital Management System should have a separate section with
+                information about physicians, such as their services, educational background,
+                achievements, and awards. The section should also contain a list of all available
+                doctors and their schedules.
+                Do remember that people want to know more before they make an appointment, so
+                the more information you provide, the more likely people will visit the hospital.</p>
+            </section>
+            <section class="sub">
+                <h4>Laboratory Management</h4>
+                <p>The Hospital Management Software should have a feature that quickly retrieves
+                and updates the results of laboratory analysis. The software should also notify
+                physicians and patients about the lab test results. It should also provide easy access
+                to all lab information in one place. Laboratory analysis is vital to the efficiency of
+                treatment; the faster doctors can get lab results, the faster can they diagnose the
+                disease.</p>
+            </section>
+            <section class="sub">
+                <h4>Inventory Management</h4>
+                <p>Hospitals are heavily dependent on medical supplies. A shortage of these supplies
+                can cost human life. Hospital Management Software should have proper inventory
+                management features to avoid any sudden lack of critical medical supplies. A well
+                designed HMS can be an irreplaceable helper in this regard.
+                With this feature, the administration can track the supplies and forecast when
+                restocking is required. An inventory management feature can also help control when
+                drugs approach their expiration dates.</p>
+            </section>
+            <section class="sub">
+                <h4>Statistical Data for Future Forecasting of Hospital Management</h4>
+                <p>Statistical reports of finance, patients' and doctors' information, staff performance,
+                and inventory can help the institute decide it's strategies better. This feature should
+                have the ability to create statistics and reports with just a few mouse clicks.</p>
+            </section>
+            <section class="sub">
+                <h4>Customer Support</h4>
+                <p>The Hospital Management System is highly sophisticated, connecting a lot of
+                different modules. There is a possibility of software malfunction. Since the entire
+                hospital is dependent on the HMS, a support helpdesk is pretty much mandatory.</p>
+            </section>
+            <section class="sub">
+                <h4>Telemedicine solution</h4>
+                <p>Telemedicine is an advanced approach in healthcare that allows virtual remote
+                meetings with a physician via teleconferencing. The feature is an excellent service
+                for patients who cannot make it to the hospital in certain situations. More about it in
+                the post A Foolproof Guide To Building Telemedicine Applications.</p>
+            </section>
+            <section class="sub">
+                <h4>Mobile App for Patients and Staff Members</h4>
+                <p>Having a mobile app is essential these days. It can help hospital management in
+                many ways, such as having personal treatment calendars, details of appointments
+                with patients, accessing patient’s information, and lab test analysis. It can also help
+                patients book or change a doctor’s appointment, check lab test results, and pay the
+                bills.
+                A mobile app will also help the hospital personnel to interact with each other more
+                conveniently. With a mobile app, doctors can keep close contact with the hospital
+                even when staying at home.</p>
+            </section>
+            <section class="sub">
+                <h4></h4>
+                <p></p>
+            </section>
+            <details>
+                <p>This template illustrates organizing the functional requirements for the product by system features, the
+                    major
+                    services
+                    provided by the product. You may prefer to organize this section by use case, mode of operation, user
+                    class, object
+                    class, functional hierarchy, or combinations of these, whatever makes the most logical sense for your
+                    product.</p>
+                <h3>3.1 System Feature 1</h3>
+                <p>Don’t really say “System Feature 1.” State the feature name in just a few words.</p>
+                <h3>3.1.1 Description and Priority</h3>
+                <p>Provide a short description of the feature and indicate whether it is of High, Medium, or Low priority.
+                    You
+                    could also include specific priority component ratings, such as benefit, penalty, cost, and risk (each
+                    rated
+                    on a relative scale from a low of 1 to a high of 9).</p>
+                <h3>3.1.2 Stimulus/Response Sequences</h3>
+                <p>List the sequences of user actions and system responses that stimulate the behavior defined for this
+                    feature. These will correspond to the dialog elements associated with use cases.</p>
+                <h3>3.1.3 Functional Requirements</h3>
+                <p>Itemize the detailed functional requirements associated with this feature. These are the software
+                    capabilities that must be present in order for the user to carry out the services provided by the
+                    feature, or to execute the use case. Include how the product should respond to anticipated error
+                    conditions or invalid inputs. Requirements should be concise, complete, unambiguous, verifiable, and
+                    necessary. Use “TBD” as a placeholder to indicate when necessary information is not yet available.</p>
+                
+                <span>Each requirement should be uniquely identified with a sequence number or a meaningful tag of some
+                    kind.>
+                    REQ-1:
+                    REQ-2:
+                    3.2 System Feature 2 (and so on)</span>
+            </details>
+        </section>
+        <section>
+            <h2>4 External Interface Requirements</h2>
+            <details>
+                <h3>4.1 User Interfaces</h3>
+                <p>Describe the logical characteristics of each interface between the software product and the users. This
+                    may include
+                    sample screen images, any GUI standards or product family style guides that are to be followed, screen
+                    layout
+                    constraints, standard buttons and functions (e.g., help) that will appear on every screen, keyboard
+                    shortcuts, error
+                    message display standards, and so on. Define the software components for which a user interface is
+                    needed. Details
+                    of the user interface design should be documented in a separate user interface specification.</p>
+                <h3>4.2 Hardware Interfaces</h3>
+                <p>Describe the logical and physical characteristics of each interface between the software product and the
+                    hardware
+                    components of the system. This may include the supported device types, the nature of the data and
+                    control
+                    interactions between the software and the hardware, and communication protocols to be used.</p>
+                <h3>4.3 Software Interfaces</h3>
+                <p>Describe the connections between this product and other specific software components (name and version),
+                    including databases, operating systems, tools, libraries, and integrated commercial components. Identify
+                    the
+                    data items or messages coming into the system and going out and describe the purpose of each. Describe
+                    the
+                    services needed and the nature of communications. Refer to documents that describe detailed application
+                    programming interface protocols. Identify data that will be shared across software components. If the
+                    data
+                    sharing mechanism must be implemented in a specific way (for example, use of a global data area in a
+                    multitasking operating system), specify this as an implementation constraint.</p>
+                <h3>4.4 Communications Interfaces</h3>
+                <p>Describe the requirements associated with any communications functions required by this product,
+                    including
+                    e-mail, web browser, network server communications protocols, electronic forms, and so on. Define any
+                    pertinent message formatting. Identify any communication standards that will be used, such as FTP or
+                    HTTP. Specify any communication security or encryption issues, data transfer rates, and synchronization
+                    mechanisms.</p>
+            </details>
+        </section>
+        <section>
+            <h2>5 Other Nonfunctional Requirements</h2>
+            <details>
+                <h3>5.1 Performance Requirements</h3>
+                <p>If there are performance requirements for the product under various circumstances, state them here and
+                    explain their rationale, to help the developers understand the intent and make suitable design
+                    choices. Specify the timing relationships for real time systems. Make such requirements as specific
+                    as possible. You may need to state performance requirements for individual functional requirements
+                    or features.</p>
+                <h3>5.2 Safety Requirements</h3>
+                <p>Specify those requirements that are concerned with possible loss, damage, or harm that could result
+                    from the use of the product. Define any safeguards or actions that must be taken, as well as
+                    actions that must be prevented. Refer to any external policies or regulations that state safety
+                    issues that affect the product’s design or use. Define any safety certifications that must be
+                    satisfied.</p>
+                <h3>5.3 Security Requirements</h3>
+                <p>Specify any requirements regarding security or privacy issues surrounding use of the product or
+                    protection of the data used or created by the product. Define any user identity
+                    authentication requirements. Refer to any external policies or regulations containing
+                    security issues that affect the product. Define any security or privacy certifications that
+                    must be satisfied.</p>
+                <h3>5.4 Software Quality Attributes</h3>
+                <p>Specify any additional quality characteristics for the product that will be important to
+                    either the customers or the developers. Some to consider are: adaptability,
+                    availability, correctness, flexibility, interoperability, maintainability, portability,
+                    reliability, reusability, robustness, testability, and usability. Write these to be
+                    specific, quantitative, and verifiable when possible. At the least, clarify the relative
+                    preferences for various attributes, such as ease of use over ease of learning.</p>
+            </details>
+        </section>
+        <section>
+            <h2>6 Other Requirements</h2>
+            <p>Define any other requirements not covered elsewhere in the SRS. This might include
+                database requirements, internationalization requirements, legal requirements, reuse
+                objectives for the project, and so on. Add any new sections that are pertinent to
+                the project.</p>
+        </section>
+        <section>
+            <h2>Appendix A: Glossary</h2>
+            <p>Define all the terms necessary to properly interpret the SRS, including acronyms
+                and abbreviations. You may wish to build a separate glossary that spans multiple
+                projects or the entire organization, and just include terms specific to a single
+                project in each SRS.</p>
+            <h2>Appendix B: Analysis Models</h2>
+            <p>Optionally, include any pertinent analysis models, such as data flow diagrams,
+                class diagrams, state-transition diagrams, or entity-relationship diagrams.</p>
+            <h2>Appendix C: Issues List</h2>
+            <p>This is a dynamic list of the open requirements issues that remain to be
+                resolved, including TBDs, pending decisions, information that is needed,
+                conflicts awaiting resolution, and the like.</p>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
